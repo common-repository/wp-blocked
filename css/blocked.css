@@ -1,0 +1,143 @@
+/*
+ * General styles
+ */
+
+div.error {
+    background: lightpink;
+   border: 1px solid crimson;
+   color: crimson;
+   padding: 0.5em;
+   margin-bottom: 1em;
+   display: block;
+}
+
+/*
+ * result loader
+ */
+
+.blocked-results-table-wrapper {
+    position: relative;
+	min-height: 50px;
+}
+
+#blocked-results-loader {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: #fafafa url("img/ajax-loader.gif") center center no-repeat;
+	color: dodgerblue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    text-align: center;
+}
+
+/*
+ * result table styles
+ */
+
+.url-results tr.ok {
+	background: lightgreen;
+}
+
+.url-results tr.prior-block {
+	background: lightyellow;
+}
+
+.url-results tr.blocked {
+	background: lightpink;
+}
+
+.url-results tr.unknown {
+	background: #fafafa;
+}
+
+.url-results tr.dns-error, .url-results tr.error {
+	background: crimson;
+}
+
+/*
+ * result permalinks
+ */
+
+.permlink a {
+	display: inline-block;
+	border-right: 1px solid;
+	padding: 0 1em 0 0;
+	margin-right: 1em;
+}
+
+.permlink a:last-child {
+	border: none;
+	margin: 0;
+}
+
+/*
+ * statistics
+ */
+
+@-webkit-keyframes statsanimation {
+      0% { background: gold; transform: rotate(360deg); }
+      25% { background: white; transform: rotate(180deg);}
+      50% { background: gold; transform: rotate(0deg);}
+}
+@-moz-keyframes statsanimation {
+      0% { background: gold; transform: rotate(360deg); }
+      25% { background: white; transform: rotate(180deg);}
+      50% { background: gold; transform: rotate(0deg);}
+}
+@-o-keyframes statsanimation {
+      0% { background: gold; transform: rotate(360deg); }
+      25% { background: white; transform: rotate(180deg);}
+      50% { background: gold; transform: rotate(0deg);}
+}
+@keyframes statsanimation {
+      0% { background: gold; transform: rotate(360deg); }
+      25% { background: white; transform: rotate(180deg);}
+      50% { background: gold; transform: rotate(0deg);}
+}
+
+.blocked-item {
+	margin-bottom: 2em;
+	overflow: hidden;
+}
+
+.blocked-item .date {
+	display: block;
+	font-size: 1.2em;
+}
+
+.blocked-item .blocked_sites {
+	font-size: 2.6em;
+	font-weight: bold;
+	line-height: 1em;
+}
+
+.blocked-item .blocked_sites i {
+	display: block;
+	font-size: 0.65em;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.blocked-item .blocked_sites_percent {
+    -webkit-animation: statsanimation ease-in-out 3s;
+    -moz-animation:    statsanimation ease-in-out 3s;
+    -o-animation:      statsanimation ease-in-out 3s;
+    animation:         statsanimation ease-in-out 3s;
+	float: left;
+	margin-right: 1em;
+	display: block;
+    font-size: 1.1em;
+	width: 100px;
+	height: 65px;
+	padding-top: 35px;
+	padding-bottom: 65px;
+	box-sizing: border-box;
+	color: #de2d3c;
+    background: gold;
+	font-size: 1.5em;
+	text-align: center;
+	border-radius: 50px;
+}
